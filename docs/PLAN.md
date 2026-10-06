@@ -300,6 +300,45 @@ Added to the backlog. The suggested phase refers to the roadmap in §10.
 
 *Note:* moving money or selling insurance brings licensing and regulatory requirements. Always go through licensed partners rather than doing it yourself.
 
+## 15. Trust: a higher bar than a normal SaaS
+
+**Why Altriq needs more trust than an average app:**
+1. **It holds the data fraudsters want.** A database of suppliers' bank details. If Altriq is breached, Altriq becomes the fraud.
+2. **It asks for sensitive access:** the accounting system and (later) the finance email inbox.
+3. **It sells security.** One incident or one embarrassing miss can end the company.
+4. **Finance buyers are cautious by nature,** and Altriq is new and unknown.
+5. **Fraudsters can pretend to be Altriq** ("Altriq alert: confirm your bank details here").
+
+### Stage 1: from day one (low cost)
+| What | Details |
+|---|---|
+| **Least access** | Read-only Xero/QuickBooks permissions. Altriq never moves money |
+| **Store as little as possible** | Keep a hash and the last 4 digits of bank numbers where possible. Encrypt everything at rest with a managed key service. Delete data when a customer leaves |
+| **Lock down accounts** | MFA required for every user, SSO (Google / Microsoft), role-based access, audit log of staff access |
+| **Trust page** | What data is collected, where it's stored, encryption, retention, subprocessors, how to report a security issue |
+| **Real company signals** | Registered company, business address, phone number, founder name and LinkedIn, privacy policy, terms, GDPR data processing agreement |
+| **Own email security** | DMARC p=reject on Altriq's domain. Publish: "Altriq will never ask you for bank details or passwords by email." |
+| **AI data rules** | Only read invoice-related emails, never train AI on customer data, use AI providers with no-retention terms. Say this publicly |
+| **Insurance** | Tech errors & omissions plus cyber liability insurance. Customers and partners will ask |
+| **Honest claims** | Sell it as a control that lowers risk, not a guarantee |
+| **Xero / QuickBooks app certification** | The app-store badge borrows the platform's trust |
+
+### Stage 2: months 3–12 (as revenue arrives)
+| What | Rough cost |
+|---|---|
+| Independent penetration test, with a summary letter for customers | ~$5k–15k |
+| **SOC 2 Type I, then Type II** (US) using a compliance tool such as Vanta, Drata or Secureframe | ~$15k–40k a year for tool and auditor |
+| ISO 27001 (UK / EU buyers) | Similar range |
+| Ready answers for security questionnaires (accounting firms and mid-sized companies send them) | Time |
+| Status page and incident response plan | Low |
+
+### Borrowed trust (the fastest kind)
+- Being listed on the **Xero and QuickBooks app stores**
+- Accounting firms and insurance agents recommending Altriq to their clients
+- **Case studies:** "Altriq caught a $48k fake bank change at a roofing company"
+- Advisors with credibility, such as a former CFO or fraud investigator
+- An insurer partnership or premium discount (§11)
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
