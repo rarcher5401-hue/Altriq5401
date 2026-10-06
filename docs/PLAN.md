@@ -195,6 +195,22 @@ Xero connection, bank-change detection with hold and call-back checklist, bank a
 - **Phase 2:** £5k MRR. Number of payment files checked. At least one documented fraud caught (your best marketing)
 - **Phase 3:** £20k+ MRR. Number of companies in the fraud network. Monthly cancellation rate under 2%
 
+## 11. Insurance partners (US)
+
+**Why insurers care:** crime and cyber policies cover "social engineering fraud" (paying a fake supplier), usually only up to $25k–$250k. Many of these policies only pay out if the customer **did a call-back check** before changing bank details or sending money. Altriq's recorded call-back workflow and audit log are proof of that check.
+
+| Type | Examples | Role |
+|---|---|---|
+| **Cyber insurers that also do security scanning (start here)** | Coalition, At-Bay, Cowbell, Corvus (Travelers), Resilience, Embroker, Vouch | Already partner with security tools and give customers discounts or recommendations. Fastest to work with |
+| **Crime and cyber insurance companies** | Chubb, Travelers, AIG, CNA, Beazley, The Hartford, Zurich, Great American, Intact, Markel | Write social-engineering cover. Slow to partner but large |
+| **Large brokers** | Marsh, Aon, WTW, Gallagher, Lockton | Advise mid-sized clients on controls and could recommend Altriq |
+| **Independent agents** | ~37,000 agencies | Sell to small businesses. Reach them through Big I and agency networks |
+| **Wholesale brokers** | Amwins, CRC, RT Specialty | Place specialist and hard-to-place cover |
+
+**Market size:** about 3,900 property, casualty and direct insurance companies in the US (IBISWorld, 2025). In cyber, the top 30 insurance groups write over 90% of admitted premium, and US cyber premiums were about $9.1B in 2024 (NAIC). Realistically there are **15–30 companies worth approaching**.
+
+**Order:** get customers and evidence first (insurers want data on losses prevented). Then approach the cyber insurers that already partner with security tools, then brokers, then large insurers.
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
@@ -209,4 +225,8 @@ Xero connection, bank-change detection with hold and call-back checklist, bank a
 - [Ramp vendor verification](https://support.ramp.com/vendor-verification)
 - [FBI IC3 2025 report, BEC figures (McDonald Hopkins)](https://www.mcdonaldhopkins.com/insights/news/the-sobering-truth-of-the-fbis-2025-internet-crime-complaint-center-report)
 - [AFP 2026 Payments Fraud and Control Survey](https://www.financialprofessionals.org/about/learn-more/press-releases/Details/over-75-percent-of-us-firms-experienced-payments-fraud-in-2025-while-ai-adoption-for-fraud-mitigation-lags)
+- [NAIC 2025 Cybersecurity Insurance Report](https://content.naic.org/sites/default/files/inline-files/2025_Cybersecurity_Insurance%20Report.pdf)
+- [How cyber and crime policies respond to social engineering (Amwins)](https://www.amwins.com/resources-and-insights/market-insights/article/how-cyber-and-crime-insurance-policies-respond-to-social-engineering)
+- [Social engineering endorsement with call-back provision (Intact)](https://portal.intactinsurance.com/system/files/mydocuments/M350%20%2803-20%29%20v1%20Social%20Engineering%20Endorsement%20-%20Call%20Back%20Provision.pdf)
+- [Big I 2026 Agency Universe Study (Insurance Business)](https://www.insurancebusinessmag.com/us/news/technology/independent-agency-revenue-rose-at-three-in-four-firms-as-ai-adoption-tripled-big-i-study-finds-590958.aspx)
 - [UK move to a single sanctions list, 28 Jan 2026 (GOV.UK)](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
