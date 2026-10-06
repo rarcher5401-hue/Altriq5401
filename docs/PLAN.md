@@ -211,6 +211,26 @@ Xero connection, bank-change detection with hold and call-back checklist, bank a
 
 **Order:** get customers and evidence first (insurers want data on losses prevented). Then approach the cyber insurers that already partner with security tools, then brokers, then large insurers.
 
+## 12. Who needs this most (target customers)
+
+**The ideal customer:** pays 50+ suppliers by bank transfer (ACH, wire, BACS, SEPA), has invoices over $5k, a finance team of 1–5 people, runs Xero or QuickBooks, receives invoices by email, and has cyber or crime insurance. Best of all if they've already had a fraud attempt.
+
+| Industry | Why they're at risk | Priority |
+|---|---|---|
+| **Construction and contractors** | Many subcontractors and suppliers, large progress payments, new subcontractors every job, bank changes are routine, finance teams are small | ⭐ Start here |
+| **Property management and real estate** | Pay many contractors and vendors, handle owners' and tenants' money, frequent targets of email fraud | ⭐ Start here |
+| **Logistics and freight** | Pay many carriers, fake carriers and payment redirection are common | High |
+| **Manufacturing, wholesale and importers** | Many suppliers, often overseas, large invoices, cross-border payments | High |
+| **Law firms (especially conveyancing / settlements)** | Move large client sums. A loss also damages their reputation and brings regulator trouble | High (higher price) |
+| **Nonprofits, schools, churches, local councils** | Weak controls, frequent fraud victims, public money | Medium (slow buyers, small budgets) |
+| **Healthcare groups and clinics** | Many vendors, busy and small admin teams | Medium |
+| **Car dealerships** | Large payments to manufacturers, finance companies and vendors | Medium |
+| **Accounting firms and bookkeepers** | Pay suppliers on behalf of clients and are blamed if fraud gets through | ⭐ The channel to reach all of the above |
+
+**Not a good fit:** very small businesses with few suppliers or who pay by card, and large companies already using Trustpair or Eftsure.
+
+**How to reach them:** accounting firms that specialise in construction or property management. One firm brings dozens of companies in the same industry, so the marketing can speak that industry's language ("protect your progress payments").
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
