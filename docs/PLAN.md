@@ -116,8 +116,9 @@ One prevented fraud saves an average business thousands to hundreds of thousands
 ## 7. Competitors
 
 Small-company competitors that already exist:
-- **OutflowGuard** (Xero App Store): watches supplier bank-detail changes, pauses suspicious payments, keeps an audit trail. Almost the same pitch as this plan.
-- **VendorAlert** (Xero App Store): emails the people you choose when a contact's bank field changes, aimed at businesses and accounting firms.
+- **OutflowGuard**: watches supplier bank-detail changes, pauses suspicious payments, requires two-person approval, sends alerts to Slack and Teams, keeps an audit trail. Aimed at accountants and bookkeepers. Free and paid plans (prices not public). Barely indexed online; looks like an early indie product.
+- Neither company publishes its revenue (MRR). At A$9/month, $10k MRR would take about 1,700 paying Xero organisations, so expect pricing pressure if you compete on alerts alone.
+- **VendorAlert** (Xero App Store): emails the people you choose when a contact's bank field changes, aimed at businesses and accounting firms. **Price: A$9/month per Xero organisation** (14-day free trial). Read-only, checks about every 6 hours. Listed in Xero's "New and noteworthy" collection, so probably launched recently.
 - **Ramp Bill Pay, BILL**: vendor bank verification and fraud alerts built into their bill-pay products (mostly US).
 
 | | Trustpair | Eftsure | Trustmi / nsKnox | **Altriq** |
