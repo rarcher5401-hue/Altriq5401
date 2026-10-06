@@ -7,7 +7,9 @@
 > Catch fake "we changed our bank account" emails before you pay them.
 > Altriq watches every supplier in your accounting software. It flags any bank-detail change, screens suppliers against sanctions lists and keeps an audit trail. Setup takes 5 minutes.
 
-**Who it's for:** finance teams and bookkeepers at companies with 20–500 employees that run Xero (and later QuickBooks, NetSuite and Odoo). Large companies already buy Trustpair or Eftsure. Smaller companies mostly don't.
+**Who it's for:** finance teams and bookkeepers at companies with 20–500 employees that run Xero (and later QuickBooks, NetSuite and Odoo). Large companies already buy Trustpair or Eftsure.
+
+> ⚠️ **Update:** smaller companies are *not* unserved. OutflowGuard and VendorAlert already sell bank-change alerts on the Xero App Store, and Ramp and BILL include vendor verification in their bill-pay products. A plain "alert when bank details change" Xero app is a copy. See §7 and §9 before building.
 
 **Why now:**
 - Scams that change a supplier's bank details are the most common payment fraud that hits businesses.
@@ -113,6 +115,11 @@ One prevented fraud saves an average business thousands to hundreds of thousands
 
 ## 7. Competitors
 
+Small-company competitors that already exist:
+- **OutflowGuard** (Xero App Store): watches supplier bank-detail changes, pauses suspicious payments, keeps an audit trail. Almost the same pitch as this plan.
+- **VendorAlert** (Xero App Store): emails the people you choose when a contact's bank field changes, aimed at businesses and accounting firms.
+- **Ramp Bill Pay, BILL**: vendor bank verification and fraud alerts built into their bill-pay products (mostly US).
+
 | | Trustpair | Eftsure | Trustmi / nsKnox | **Altriq** |
 |---|---|---|---|---|
 | Target customer | Enterprise | Mid-market to enterprise (AU first) | Enterprise | **Small and mid-sized companies, bookkeepers** |
@@ -127,6 +134,17 @@ One prevented fraud saves an average business thousands to hundreds of thousands
 4. Do you screen suppliers against sanctions lists today? Does anyone ask you to (auditors, banks, insurers)?
 5. Would you pay £49–149/month for this? Who signs off that spend?
 
+## 9. Honest check: is there room?
+
+- **Demand is real.** The FBI's 2025 IC3 report lists $3.05B of US business email compromise losses (averaging about $123k per incident), and AFP's 2026 survey says 74% of organisations were hit by it in 2025.
+- **But the small-business Xero gap is already being filled** (OutflowGuard, VendorAlert). Small companies also tend not to buy prevention until they've been burned.
+- **Ways to stand out (test these in customer calls):**
+  1. **Accounting-firm dashboard:** one screen covering all of a firm's client companies, sold per client, so one sale brings many companies.
+  2. **Insurer angle:** cyber and crime insurers ask for call-back controls before covering social-engineering fraud. Proof that a company passed the control could earn a premium discount, and insurers could become a sales channel.
+  3. **Platforms the existing apps don't cover yet:** QuickBooks, Sage, Odoo, NetSuite mid-market.
+  4. **More than alerts:** bank name-to-account matching, sanctions checks, VAT checks and a verified supplier record, not just a notification.
+- **Before writing code:** check OutflowGuard's and VendorAlert's review counts and pricing on the Xero App Store. If they have few reviews after a long time on the store, that's a warning about demand for the standalone app.
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
@@ -136,4 +154,9 @@ One prevented fraud saves an average business thousands to hundreds of thousands
 - [OpenSanctions licensing](https://www.opensanctions.org/licensing/)
 - [Xero Developer Platform commercial terms](https://developer.xero.com/xero-developer-platform-commercial-terms)
 - [Xero App Store certification checkpoints (Codat)](https://docs.codat.io/integrations/accounting/xero/partner-certification/checkpoints-app-store)
+- [OutflowGuard](https://dolphinvoice.ai/zh/ai-apps/outflowguard-1096483)
+- [VendorAlert on the Xero App Store](https://apps.xero.com/app/vendoralert)
+- [Ramp vendor verification](https://support.ramp.com/vendor-verification)
+- [FBI IC3 2025 report, BEC figures (McDonald Hopkins)](https://www.mcdonaldhopkins.com/insights/news/the-sobering-truth-of-the-fbis-2025-internet-crime-complaint-center-report)
+- [AFP 2026 Payments Fraud and Control Survey](https://www.financialprofessionals.org/about/learn-more/press-releases/Details/over-75-percent-of-us-firms-experienced-payments-fraud-in-2025-while-ai-adoption-for-fraud-mitigation-lags)
 - [UK move to a single sanctions list, 28 Jan 2026 (GOV.UK)](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
