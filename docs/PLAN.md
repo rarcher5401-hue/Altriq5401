@@ -193,7 +193,7 @@ Xero connection, bank-change detection with hold and call-back checklist, bank a
 - **Phase 0:** 3 connected Xero companies (needed for Xero certification), 10 customer calls
 - **Phase 1:** 10 paying customers or 2 accounting firms. Share of invoices scanned that produce a useful alert
 - **Phase 2:** £5k MRR. Number of payment files checked. At least one documented fraud caught (your best marketing)
-- **Phase 3:** £20k+ MRR. Number of companies in the fraud network. Monthly cancellation rate under 2%
+- **Phase 3:** £20k+ MRR. Number of companies in the fraud network. Monthly cancellation rate under 2%. SOC 2 Type I report in hand, Type II observation under way (§15)
 
 ## 11. Insurance partners (US)
 
@@ -332,6 +332,37 @@ Added to the backlog. The suggested phase refers to the roadmap in §10.
 | Ready answers for security questionnaires (accounting firms and mid-sized companies send them) | Time |
 | Status page and incident response plan | Low |
 
+### SOC 2 plan
+
+**What it is:** an independent audit (by a licensed CPA firm) showing that Altriq's security controls are designed properly (**Type I**, one point in time) and actually work over a period (**Type II**, 3–12 months of observation). US mid-sized companies, larger accounting firms and insurers will ask for it. Small businesses usually won't.
+
+**When to start:** at about **$10k–20k MRR**, or sooner if a deal worth more than the cost requires it. Until then, use the Stage 1 practices, a pen test letter and the trust page.
+
+**Costs (first year, startup under 50 people):**
+| Item | Cost |
+|---|---|
+| Compliance tool (Vanta, Drata, Secureframe, Sprinto, Thoropass) | $7.5k–20k / year |
+| Type I audit | $7.5k–15k |
+| Type II audit | $12k–20k |
+| Penetration test | $5k–15k |
+| Supporting security tools (device management, logging, password manager) | $1k–5k / year |
+| **Total year 1** | **about $20k–40k**. Renewals are 20–40% cheaper |
+
+Ways to save: buy the tool and audit as one package, ask for startup discounts, and start with Type I.
+
+**Steps and timeline:**
+| When | Step |
+|---|---|
+| **Day 1 (free)** | Build "audit-ready": MFA everywhere, SSO, encryption, least access, access logs, code review, backups, infrastructure as code. Write down what you do |
+| **Trigger hit** | Choose a compliance tool and auditor. Scope: Security (add Confidentiality, since Altriq holds bank data) |
+| **Month 1–2** | Connect the tool to cloud, code and HR systems. Adopt its policy templates. Fix the gaps it finds. Security awareness training, background checks, vendor list |
+| **Month 2–3** | Pen test. **Type I audit**, which gives a report to share with prospects |
+| **Month 3–9** | Type II observation period (3 months minimum for the first one). Keep evidence collecting automatically |
+| **Month 9–12** | **Type II report.** Publish a trust center (e.g. through the compliance tool) where prospects request the report under NDA |
+| **Every year** | Renew Type II and pen test. Add ISO 27001 if UK / EU sales need it |
+
+**Roadmap fit:** start audit-ready habits in Phase 0. Start SOC 2 in Phase 2–3, once MRR or a key deal justifies it (§10).
+
 ### Borrowed trust (the fastest kind)
 - Being listed on the **Xero and QuickBooks app stores**
 - Accounting firms and insurance agents recommending Altriq to their clients
@@ -357,4 +388,7 @@ Added to the backlog. The suggested phase refers to the roadmap in §10.
 - [How cyber and crime policies respond to social engineering (Amwins)](https://www.amwins.com/resources-and-insights/market-insights/article/how-cyber-and-crime-insurance-policies-respond-to-social-engineering)
 - [Social engineering endorsement with call-back provision (Intact)](https://portal.intactinsurance.com/system/files/mydocuments/M350%20%2803-20%29%20v1%20Social%20Engineering%20Endorsement%20-%20Call%20Back%20Provision.pdf)
 - [Big I 2026 Agency Universe Study (Insurance Business)](https://www.insurancebusinessmag.com/us/news/technology/independent-agency-revenue-rose-at-three-in-four-firms-as-ai-adoption-tripled-big-i-study-finds-590958.aspx)
+- [SOC 2 compliance cost 2026 (Agency)](https://blog.getagency.com/articles/how-much-does-soc-2-compliance-cost-2026)
+- [SOC 2 audit cost (Drata)](https://drata.com/blog/soc-2-audit-cost)
+- [Drata vs Vanta pricing (Costbench)](https://www.costbench.com/compare/drata-vs-vanta/)
 - [UK move to a single sanctions list, 28 Jan 2026 (GOV.UK)](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
