@@ -231,6 +231,75 @@ Xero connection, bank-change detection with hold and call-back checklist, bank a
 
 **How to reach them:** accounting firms that specialise in construction or property management. One firm brings dozens of companies in the same industry, so the marketing can speak that industry's language ("protect your progress payments").
 
+## 13. Sales channels: accounting firms and independent insurance agents
+
+Both channels reach many customers through one relationship.
+
+### Accounting firms and bookkeepers (first channel)
+- Work in their clients' Xero / QuickBooks every day and often run their payments
+- Are blamed when fraud gets through, so they have their own reason to buy
+- **Offer:** the Firm plan (£15–40 per client company per month), a white-label client report, and a partner listing on the Xero and QuickBooks app stores
+
+### Independent insurance agents (second channel, after the first case studies)
+**What they are:** local insurance agencies that are their own businesses and sell policies from many insurers (Travelers, Chubb, The Hartford, etc.), unlike captive agents who work for one company (State Farm, Allstate). There are about **37,000** in the US, averaging about 10 staff, and they sell business insurance (liability, property, workers' comp, cyber, crime) to exactly our target customers.
+
+**Why they'd recommend Altriq:**
+1. They already insure many contractors, property managers and other target businesses
+2. They review each client's risks at every yearly renewal, a natural moment to recommend controls
+3. A client's fraud loss means a hard claim, an unhappy client and a higher premium, which hurts the agent too
+4. Many social-engineering fraud policies only pay out if a call-back was done. Altriq records it, so claims are more likely to be paid
+
+**How to work with them:**
+| Model | Details |
+|---|---|
+| Referral commission | 10–20% of the subscription, recurring for as long as the client stays |
+| Co-branded offer | "Clients of Smith Insurance get 3 months free" |
+| Renewal pack | Agent gives clients an Altriq "payment fraud controls" report to attach to their insurance application |
+| Agent dashboard (later) | Shows which of the agent's clients are protected. Helps them place cover and argue for better premiums |
+
+**How to find them:** state associations of the Big I (Independent Insurance Agents & Brokers of America), agency networks and clusters that group hundreds of agencies (e.g. SIAA, Iroquois, Renaissance Alliance), local agency events and LinkedIn. Start with agencies that specialise in construction or real estate.
+
+## 14. More features: AI, non-AI and financial services
+
+Added to the backlog. The suggested phase refers to the roadmap in §10.
+
+### AI features
+| Feature | What it does | Phase |
+|---|---|---|
+| **AI call-back assistant** ⭐ | Places the verification call to the supplier's *trusted* number, asks them to confirm the new bank details, records and transcribes the call, and attaches it to the audit log. Turns a chore staff skip into one click | 2 |
+| **Email thread-hijack detection** | Spots a fraudster replying inside a real email thread: reply-to mismatch, SPF/DKIM/DMARC failures, a new sender in an old thread, changes in writing style | 1–2 |
+| **Forged document detection** | Checks bank letters and invoice PDFs for editing (metadata, font and layout mismatches, logo copies) | 2 |
+| **Plain-English alert explanations** | Every alert says why in one sentence ("Bank changed 2 days after a new email domain first appeared; supplier's last 14 payments went to another bank") | 1 |
+| **"Is it safe to pay?" assistant** | Ask about any supplier or payment and get an answer with its sources across all the checks | 2–3 |
+| **Fraud-awareness training simulations** | Send finance staff realistic fake "we changed our bank" emails and short training. Insurers often require this training | 2 |
+| **Supplier risk score** | Combines company status, sanctions, negative news, payment history and bank-change history into one score | 3 |
+| **Invoice capture into Xero / QuickBooks** | Read invoices and create draft bills automatically. Adds everyday time savings, not just protection (competes with Dext / Hubdoc, so add it only if customers ask) | 3 |
+
+### Non-AI features
+| Feature | What it does | Phase |
+|---|---|---|
+| **Free "supplier fraud health check"** ⭐ | One-time scan: duplicate suppliers, suppliers sharing a bank account, missing details, recent bank changes, dormant suppliers. The best way to win customers | 0–1 |
+| **Lookalike domain monitoring** ⭐ | Watches for newly registered domains that look like the customer's or their top suppliers' (`acme-c0.com`). Warns *before* the attack starts | 1 |
+| **Email security check of suppliers** | Shows which suppliers have weak email security (no DMARC), so are easier to impersonate | 1 |
+| **Two-person approval for bank changes** | Requires a second person to approve. Enforces separation of duties | 1 |
+| **"We've been scammed" emergency button** | Step-by-step guide: call the bank to recall the payment (first 24–72 hours matter), report to FBI IC3 (whose Recovery Asset Team can sometimes freeze wires), notify the insurer. Pre-filled from the audit log | 1 |
+| **US W-9 collection and IRS TIN matching** | Supplier portal collects W-9s and checks name and tax ID against IRS records. Also helps with 1099s | 2 |
+| **Mobile approvals** | Approve or hold changes and payment runs from the phone | 2 |
+| **Policy templates** | Payment-fraud control policy, call-back procedure and staff checklist for audits and insurance applications | 1 |
+| **Owner / board report** | Monthly summary: checks done, frauds blocked, controls in place | 1 |
+| **Bank Positive Pay files** | Generate Positive Pay files (the bank only pays approved payees and amounts) for US banks that offer it | 3 |
+
+### Financial-services add-ons (extra revenue)
+| Service | How it makes money | Phase |
+|---|---|---|
+| **Payment guarantee** | Partner with an insurer: if Altriq marks a payment as verified and it turns out to be fraud, it's covered up to a limit. Charge a premium; the insurer takes the risk | 3+ |
+| **Verified supplier payments** | Pay suppliers through Altriq using only verified accounts, with a payments partner (e.g. Stripe Treasury, Modern Treasury, Wise Platform) handling the money. Earn a fee per payment | 3+ |
+| **International payments** | Cheaper currency exchange for overseas suppliers through a payments partner. Earn on the exchange margin | 3+ |
+| **Early payment / supplier finance** | Suppliers can be paid early for a small discount, funded by a lending partner | Later |
+| **Cyber / crime insurance referrals** | Customers can get quotes from partner insurers through Altriq. Earn a referral or commission fee (needs an insurance license, or work through a licensed partner) | 3 |
+
+*Note:* moving money or selling insurance brings licensing and regulatory requirements. Always go through licensed partners rather than doing it yourself.
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
