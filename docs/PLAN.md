@@ -146,6 +146,55 @@ Small-company competitors that already exist:
   4. **More than alerts:** bank name-to-account matching, sanctions checks, VAT checks and a verified supplier record, not just a notification.
 - **Before writing code:** check OutflowGuard's and VendorAlert's review counts and pricing on the Xero App Store. If they have few reviews after a long time on the store, that's a warning about demand for the standalone app.
 
+## 10. Product roadmap
+
+The basic bank-change alert is already sold for A$9/month (VendorAlert), so it can't be the whole product. The first version (§5) gets you into Xero and gets customers connected. Each phase after that adds something the A$9 apps don't have.
+
+### Phase 0: First version (days 1–30), as in §5
+Xero connection, bank-change detection with hold and call-back checklist, bank account format checks, sanctions/VAT/company checks, audit log, email alerts.
+**Design now for later:** store a fingerprint of every bank account (hashed) and every verification result, so the fraud network (Phase 3) has data from day one.
+
+### Phase 1: Stand out (days 31–90)
+| Feature | What it does | Why it matters |
+|---|---|---|
+| **Invoice inbox scanning** ⭐ | Connect the accounts-payable mailbox (Gmail / Microsoft 365). Read invoice PDFs, compare bank details with the supplier's verified details, flag lookalike domains (`acme-co.com` vs `acmeco.com`), first-time senders and "we changed banks / urgent" wording | Catches fraud *before* anyone enters it into Xero. Competitors only see it afterwards |
+| **Accounting-firm dashboard** | One screen covering every client company, alerts grouped by client, branded monthly "your payments are protected" report | The growth channel: one firm brings 20–200 client companies |
+| **Call-back workflow done properly** | Phone number taken from a trusted source (Companies House, the supplier's website, the baseline record), never the email. Records who called, when, outcome, notes | Turns a checklist into evidence an auditor or insurer will accept |
+| Slack / Teams alerts | Alerts with approve/hold buttons | Matches OutflowGuard |
+
+### Phase 2: Protect the payment (months 3–6)
+| Feature | What it does |
+|---|---|
+| **Payment file check** ⭐ | Upload or intercept the bank payment file (BACS, SEPA XML, ABA, NACHA) before it goes to the bank and compare every payee with verified details. Catches tampering outside Xero |
+| **Supplier self-service portal** | Supplier enters bank details via a secure link and uploads a bank letter or statement. AI checks the document (name, account and logo consistency, signs of editing). No more bank details by email |
+| **Payment anomaly alerts** | New supplier with a large first payment, duplicate invoices, an unusual amount for this supplier, a bank in a different country from the supplier, a payment just after a bank change |
+| **Xero access monitoring** | Alert on a new Xero user, a role change, or an edit from someone outside the finance team. Many frauds start with a compromised login |
+| **Insurance evidence pack** | One-click PDF of the controls in place and their history, for cyber or crime insurance applications and claims |
+
+### Phase 3: Make it hard to copy (months 6–12)
+| Feature | What it does |
+|---|---|
+| **Shared fraud network** ⭐ | A bank account flagged as fraudulent at one customer is flagged for all. A supplier account already verified by many customers shows higher confidence. Uses hashed account fingerprints only. Competitors can't copy this without the same customers |
+| **Bank account ownership check** | Name-to-account match through a UK Confirmation of Payee / EU Verification of Payee partner (SurePay, finAPI), Plaid or micro-deposits in the US, and Australia's Confirmation of Payee as it rolls out |
+| **Company status alerts** | Supplier dissolved, in liquidation, directors changed, newly sanctioned (Companies House streaming API plus the sanctions refresh) |
+| **More platforms** | QuickBooks Online next, then NetSuite, Sage and Odoo, chosen by customer demand |
+| Insurer partnerships | Premium discounts for customers who pass the controls, with insurers sending you customers |
+
+### Pricing by plan
+| Plan | Includes | Price |
+|---|---|---|
+| **Free / Basic** | Bank-change alerts, format checks | Free–£9/month per company (matches VendorAlert, brings customers in) |
+| **Protect** | + call-back workflow, sanctions/VAT/company checks, audit log, Slack/Teams | £49/month |
+| **Shield** | + invoice inbox scanning, payment file check, anomaly alerts, supplier portal, insurance pack | £149/month |
+| **Firm** | Firm dashboard + Protect or Shield for every client company | £15–40 per client company per month |
+| **Network add-ons** (Phase 3) | Ownership checks | Per check, passed through at a markup |
+
+### What to measure at each phase
+- **Phase 0:** 3 connected Xero companies (needed for Xero certification), 10 customer calls
+- **Phase 1:** 10 paying customers or 2 accounting firms. Share of invoices scanned that produce a useful alert
+- **Phase 2:** £5k MRR. Number of payment files checked. At least one documented fraud caught (your best marketing)
+- **Phase 3:** £20k+ MRR. Number of companies in the fraud network. Monthly cancellation rate under 2%
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
