@@ -160,6 +160,7 @@ Xero connection, bank-change detection with hold and call-back checklist, bank a
 | **Invoice inbox scanning** ⭐ | Connect the accounts-payable mailbox (Gmail / Microsoft 365). Read invoice PDFs, compare bank details with the supplier's verified details, flag lookalike domains (`acme-co.com` vs `acmeco.com`), first-time senders and "we changed banks / urgent" wording | Catches fraud *before* anyone enters it into Xero. Competitors only see it afterwards |
 | **Accounting-firm dashboard** | One screen covering every client company, alerts grouped by client, branded monthly "your payments are protected" report | The growth channel: one firm brings 20–200 client companies |
 | **Call-back workflow done properly** | Phone number taken from a trusted source (Companies House, the supplier's website, the baseline record), never the email. Records who called, when, outcome, notes | Turns a checklist into evidence an auditor or insurer will accept |
+| **Contact risk check** ⭐ (1Lookup-style, see §16) | Before any call-back or bank change, check the supplier's phone number, email and domain: VoIP or burner number, recently changed carrier, brand-new or lookalike domain, missing email security | Stops staff from "verifying" with the fraudster's own number |
 | Slack / Teams alerts | Alerts with approve/hold buttons | Matches OutflowGuard |
 
 ### Phase 2: Protect the payment (months 3–6)
@@ -370,6 +371,41 @@ Ways to save: buy the tool and audit as one package, ask for startup discounts, 
 - Advisors with credibility, such as a former CFO or fraud investigator
 - An insurer partnership or premium discount (§11)
 
+## 16. Contact risk check (1Lookup-style feature)
+
+**Idea:** 1Lookup (~$243k on TrustMRR) sells phone and email validation. Altriq uses the same kind of checks for one job: **spotting fake supplier contact details before anyone calls back or pays.** Fraudsters' bank-change emails often include a "new" phone number. If staff call that number to verify, the fraudster answers.
+
+### What it checks
+| Item | Check | Red flag example |
+|---|---|---|
+| **Phone number** | Line type (mobile / landline / fixed VoIP / non-fixed VoIP / toll-free), carrier, recent carrier change, SIM swap (where available), whether it matches the number on the supplier's website, invoices or registry record | "New number is a non-fixed VoIP number, not on the supplier's website" |
+| **Email address** | Valid mailbox, disposable or free provider (Gmail etc. for a company that used its own domain), sender differs from the usual contact | "Remittance request came from acme.billing@gmail.com, but the supplier always used @acme.com" |
+| **Email domain** | Domain age (RDAP/WHOIS), lookalike of the real supplier domain, MX records, SPF/DKIM/DMARC set up | "Domain acme-co.com registered 6 days ago, 1 letter different from acme.com" |
+| **Bank vs supplier** | Bank country vs supplier country, account name vs company name (with name-check partners, §10 Phase 3) | "UK supplier, new account in Lithuania" |
+
+### Output
+- A **Contact Risk Score** (low / medium / high) with plain-English reasons on every bank-change alert and supplier record
+- The call-back screen shows **"Call this number"** (trusted source, low risk) and **"Do NOT call this number"** (the number from the suspicious email, high risk)
+- All results saved to the audit log as evidence
+
+### Data providers (buy, don't build)
+| Need | Options | Approx. cost |
+|---|---|---|
+| Phone line type and carrier | Twilio Lookup (Line Type Intelligence), Telesign, Vonage, Prove, IPQualityScore | ~$0.008–0.01 per lookup (Twilio) |
+| SIM swap / ownership | Twilio Lookup SIM Swap, Prove, Telesign (coverage varies by country) | Higher per lookup, use only on high-risk cases |
+| Email validation | ZeroBounce, NeverBounce, Kickbox, IPQualityScore, AbstractAPI | ~$0.001–0.01 per check |
+| Domain age and lookalikes | RDAP/WHOIS (free or cheap), dnstwist-style lookalike generation (open source), DNS lookups for MX/SPF/DMARC (free) | Near zero |
+
+Cost per customer is tiny. Even 500 suppliers checked on onboarding plus every change is a few dollars a month.
+
+### Roadmap fit
+- **Phase 0–1:** free checks first (domain age, lookalikes, MX/SPF/DMARC, free-email detection, matching against the number on file)
+- **Phase 1:** paid phone line-type lookups on every bank-change and new-supplier event
+- **Phase 2:** SIM swap / ownership checks for high-risk alerts. Feed results into the shared fraud network (Phase 3), e.g. phone numbers and domains already seen in frauds at other customers
+
+### Bonus product (optional, later)
+The same engine could be sold on its own as a **"verify a payee contact" API** to accounting software, AP tools and payment platforms. Don't start here: 1Lookup-style validation is a crowded market. Inside Altriq it's a strong feature; on its own it's a commodity.
+
 ## Sources
 - [Trustpair vs Eftsure (Capterra)](https://www.capterra.ae/compare/187396/216234/trustpair/vs/eftsure)
 - [Eftsure competitors (CB Insights)](https://www.cbinsights.com/company/eftsure/alternatives-competitors)
@@ -391,4 +427,6 @@ Ways to save: buy the tool and audit as one package, ask for startup discounts, 
 - [SOC 2 compliance cost 2026 (Agency)](https://blog.getagency.com/articles/how-much-does-soc-2-compliance-cost-2026)
 - [SOC 2 audit cost (Drata)](https://drata.com/blog/soc-2-audit-cost)
 - [Drata vs Vanta pricing (Costbench)](https://www.costbench.com/compare/drata-vs-vanta/)
+- [Twilio Lookup pricing](https://www.twilio.com/en-us/user-authentication-identity/pricing/lookup)
+- [Kibu: platform for IDD providers](https://kibu.com/blog/why-idd-providers-choose-kibu)
 - [UK move to a single sanctions list, 28 Jan 2026 (GOV.UK)](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
